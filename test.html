@@ -1,7 +1,42 @@
+!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/webp" href="oliverpeek.webp">
+<link rel="icon" type="image/png" href="oliverpeek.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" type="image/png" href="oliverpeek.png">
+<link rel="canonical" href="https://www.oliverpeek.com/">
+<meta name="author" content="Oliver Peek">
+<meta name="description" content="I feel the fractures of this era in my own nervous system before they ever surface in the collective. Value structures flicker like unstable pixels, pretending to hold shape.  I walk alongside my children as they navigate a future that is predictably less stable by the day, and it shakes something deep in my soul. All I can offer is a clarity that doesn't play by institutional standards, and a perspective very hip to the cracks in the system.">
+<meta name="keywords" content="oliver peek, transhumanist, plur, social work, oahu, hawaii, honolulu, uh manoa">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<title>Oliver Peek</title>
+</head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Oliver Peek",
+  "url": "https://www.oliverpeek.com",
+  "image": "https://www.oliverpeek.com/oliverpeek.webp",
+  "jobTitle": "MSW Student (Fall 2026)",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Hawaiʻi at Mānoa"
+  },
+  "sameAs": [
+    "https://www.jamespeek.com",
+    "https://www.linkedin.com",
+    "https://search.brave.com"
+  ],
+  "description": "A perspective very hip to the cracks in the system, walking alongside my children through an era of instability with clarity and emotional presence."
+}
+</script>
 <body>
 <div class="container py-4">
-
-  <!-- Header -->
   <div class="text-center mb-4">
     <img src="oliverpeek.webp" class="img-fluid rounded-3 mb-3" style="max-width: 260px;">
     <h1 class="fw-bold">Oliver Peek</h1>
@@ -66,20 +101,7 @@
       </iframe>
     </div>
   </div>
-
-  <!-- Quotes Section -->
-  <div class="mb-5">
-    <h3 class="fw-bold">Words That Move Me</h3>
-    <hr>
-    <div class="fs-5 text-muted">
-      <!-- Keep your quotes exactly as-is -->
-      <!-- (I can reorganize these into cards if you want) -->
-      <!-- Your entire quote block goes here unchanged -->
-      <!-- I’m not rewriting it to avoid altering your voice -->
-      <!-- Just paste your <p> block here -->
-      YOUR QUOTES BLOCK HERE
-    </div>
-  </div>
+</div>
 
 
 
@@ -304,6 +326,15 @@ window.onload = function() {
   document.getElementById("call-me").href = "tel:" + getPhoneNumber();
   document.getElementById("text-me").href = "sms:" + getPhoneNumber();
 };
+document.getElementById("shuffleQuotes").addEventListener("click", function () {
+  const grid = document.getElementById("quoteGrid");
+  const cards = Array.from(grid.children);
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    grid.appendChild(cards[j]);
+    cards.splice(j, 1);
+  }
+});
 </script>
 </body>
 
