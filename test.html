@@ -63,7 +63,7 @@
       </a>
     </div>
     <div class="col-4 col-md-2">
-      <a href="mailto:" class="text-decoration-none text-light">
+      <a href="mailto:" id="email-me" class="text-decoration-none text-light">
         <i class="bi bi-envelope-fill fs-1"></i>
         <div class="small mt-1">Email</div>
       </a>
@@ -324,6 +324,7 @@ function getPhoneNumber() {
 window.onload = function() {
   document.getElementById("call-me").href = "tel:" + getPhoneNumber();
   document.getElementById("text-me").href = "sms:" + getPhoneNumber();
+  document.getElementById("email-me").href = "mailto:" + crypto.randomUUID()+"@oliverpeek.com?subject=Aloha&body=I+need+to+contact+you,+and+understand+this+is+a+burner+email.";
 };
 document.getElementById("shuffleQuotes").addEventListener("click", function () {
   const grid = document.getElementById("quoteGrid");
