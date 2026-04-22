@@ -324,7 +324,7 @@ function getPhoneNumber() {
 window.onload = function() {
   document.getElementById("call-me").href = "tel:" + getPhoneNumber();
   document.getElementById("text-me").href = "sms:" + getPhoneNumber();
-  document.getElementById("email-me").href = "mailto:" + crypto.randomUUID()+"@oliverpeek.com?subject=Aloha&body=I+need+to+contact+you,+and+understand+this+is+a+burner+email.";
+  document.getElementById("email-me").href = "mailto:" + crypto.randomUUID()+"@oliverpeek.com?subject=Aloha&body=I need to contact you, and understand this is a burner email.";
 };
 document.getElementById("shuffleQuotes").addEventListener("click", function () {
   const grid = document.getElementById("quoteGrid");
