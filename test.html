@@ -73,23 +73,19 @@
     <h3 class="fw-bold">Rollins Band — Shine</h3>
     <div class="ratio ratio-16x9">
       <iframe 
-        src="https://www.youtube.com/embed/c1p8vfDciVI"
+        src="https://www.youtube.com/embed/VTerCr4nDCU"
         allowfullscreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
       </iframe>
     </div>
   </div>
 <div class="mb-5">
-  <h3 class="fw-bold">Words That Move Me</h3>
-  <button id="shuffleQuotes" class="btn btn-outline-light btn-sm mb-3">
-    <i class="bi bi-shuffle"></i> Shuffle
-  </button>
+  <div class="d-flex align-items-center">
+    <h3 class="fw-bold">Words That Move Me</h3>
+    <button id="shuffleQuotes" type="button" class="btn btn-outline-light btn-sm ms-3"><i class="bi bi-shuffle"></i> Shuffle</button>
+  </div>
   <hr>
-
   <div id="quoteGrid" class="row row-cols-1 row-cols-md-2 g-4">
-
-    <!-- TEMPLATE FOR EACH QUOTE -->
-    <!-- Just duplicate this structure for new quotes -->
 
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
@@ -264,11 +260,6 @@
   </div>
 </div>
 
-
-
-
-  
-  <!-- Search -->
   <form class="input-group input-group-lg mb-5" action="https://search.brave.com/search" method="get">
     <input type="hidden" name="source" value="web">
     <input type="search" name="q" class="form-control fw-bold" placeholder="Search..." aria-label="Search">
@@ -277,11 +268,9 @@
     </button>
   </form>
 
-  <!-- Favorite Links -->
   <h3 class="fw-bold">Some of My Favorite Links</h3>
   <hr>
   <ul class="list-unstyled fs-5">
-  <li><a class="fs-4" href="https://www.apple.com/">Apple</a></li>
   <li><a class="fs-4" href="https://www.schwab.com/resource/application-to-add-a-schwab-global-account-to-an-existing-schwab-one-account">Protect your Assets through diversification</a></li>
   <li><a class="fs-4" href="https://www.google.com/search?rls=en&q=epdix&ie=UTF-8&oe=UTF-8">Invest in the future = invest in the "other" (look at the 2 year trend, not the 1 month pullback)</a></li>
   <li><a class="fs-4" href="https://joinuarmy.org/en/">Help Ukraine fight for global freedom.</a></li>
@@ -292,17 +281,14 @@
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=iKyQZC7BwNY">Chemical Brothers - Surface to Air</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=Ntj6N2D_7xw">Kosheen - Slip and Slide (Suicide)</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=Q04d4O8etHI">Rage Against the Machine - Township Rebellion</a></li>
-  <li><a class="fs-4" href="https://music.youtube.com/watch?v=T7cuw9WVrGI">Chemical Brothers - Salmon Dance</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=Av4hy0bp_Uk">Live - White (Discussion)</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=Fm72DPJCX58">Mad Season - River of Deceit</a></li>
-  <li><a class="fs-4" href="https://music.youtube.com/watch?v=jIvUkWSsW1w">Suicidal Tendencies - Institutionalized</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=B6GdsRIbTSk">4 Non Blondes - What's Up</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=eYxs4esLI_E">CAKE - Sheep Go To Heaven</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=Ck0LO6b6OQc">Alice Deejay - Better Off Alone</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=ElbRvE_zxzY">Andain - Beautiful Things</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=QBDbV6AJSL0">Art of Trance - Madagascar (Ferry Corsten remix)</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=1_3PeiE07KE">Audioslave - Doesn't Remind Me</a></li>
-  <li><a class="fs-4" href="https://music.youtube.com/watch?v=hykMfx1OP8Y">Incubus - Make Yourself</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=djbD3rROa2Q">Beastie Boys - Namaste</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=c3Pd7nH7Y40">Gigi D'Agostino - L'amour Toujours</a></li>
   <li><a class="fs-4" href="https://music.youtube.com/watch?v=6ET7e4NCsl8">La Rissa - I Do Both Jay and Jane (Rave Radio Edit)</a></li>
@@ -311,11 +297,7 @@
   </ul>
 
 </div>
-
-  
 </div>
-
-
 <script>
 function getPhoneNumber() {
   const p = 700;
