@@ -17,8 +17,18 @@
 <style>
 .carousel-control-prev,
 .carousel-control-next {
-    z-index: 5; /* Forces the buttons to stay on top of the video */
-    width: 10%; /* Makes the clickable area a bit smaller so you can still hit 'Play' */
+    z-index: 5;
+    width: 60px; /* Narrower clickable area so you can hit 'Play' on YouTube */
+}
+
+/* This makes the buttons visible and distinct on the sides */
+.custom-side-btn {
+    background: rgba(0, 0, 0, 0.4); /* Darker background so white icons pop */
+    transition: background 0.3s ease;
+}
+
+.custom-side-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 </style>
 </head>
