@@ -244,13 +244,10 @@
 </div>
 </div>
 
-
-<br/><br/>
 <div class="row justify-content-center mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
 
-  
 
 <div class="mb-5">
   <div class="d-flex align-items-center">
@@ -497,53 +494,6 @@ document.getElementById("shuffleQuotes").addEventListener("click", function () {
     cards.splice(j, 1);
   }
 });
-</script>
-<script>
-  // 1. Load the YouTube IFrame API asynchronously
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  var ytPlayers = [];
-  var carouselEl = document.getElementById('musicCarousel');
-  
-  // Get the Bootstrap carousel instance
-  var bsCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
-
-  // 2. This function is automatically called by the YT API once it's ready
-  function onYouTubeIframeAPIReady() {
-    var iframes = carouselEl.querySelectorAll('iframe');
-    
-    iframes.forEach(function(iframe) {
-      var player = new YT.Player(iframe, {
-        events: {
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      ytPlayers.push(player);
-    });
-  }
-
-  // 3. Listen for play/pause events from any of the videos
-  function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.PLAYING) {
-      // Pause the carousel when a video starts playing
-      bsCarousel.pause();
-    } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
-      // Resume the carousel when the video pauses or ends
-      bsCarousel.cycle();
-    }
-  }
-
-  // 4. (Optional) Pause the active video if the user manually slides the carousel
-  carouselEl.addEventListener('slide.bs.carousel', function () {
-    ytPlayers.forEach(function(player) {
-      if (typeof player.getPlayerState === 'function' && player.getPlayerState() === YT.PlayerState.PLAYING) {
-        player.pauseVideo();
-      }
-    });
-  });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
