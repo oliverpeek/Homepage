@@ -231,8 +231,6 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-      
-
 </div>
   <div class="card-footer border-secondary text-center">
     <h5 id="carousel-title" class="mb-0 text-info">Loading...</h5>
@@ -247,7 +245,6 @@
   </div>
   <hr>
   <div id="quoteGrid" class="row row-cols-1 row-cols-md-2 g-4">
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -261,7 +258,6 @@
         </div>
       </div>
     </div>
-        
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -275,7 +271,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -289,9 +284,6 @@
         </div>
       </div>
     </div>
-
-
-        
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -305,9 +297,6 @@
         </div>
       </div>
     </div>
-        
-        
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -321,7 +310,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -335,7 +323,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -349,7 +336,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -363,7 +349,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -377,7 +362,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -391,7 +375,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -405,7 +388,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -419,7 +401,6 @@
         </div>
       </div>
     </div>
-
     <div class="col quote-card">
       <div class="card h-100 bg-dark border-secondary">
         <div class="card-body">
@@ -449,34 +430,31 @@
 </ul>
 </div>
 <script>
-  const carousel = document.getElementById('musicCarousel');
-  const title = document.getElementById('carousel-title');
-
-  function updateTitle() {
-    const active = carousel.querySelector('.carousel-item.active');
-    title.textContent = active.dataset.title || '';
-  }
-
-  carousel.addEventListener('slid.bs.carousel', updateTitle);
-  updateTitle();
-
+const carousel = document.getElementById('musicCarousel');
+const title = document.getElementById('carousel-title');
+function updateTitle() {
+      const active = carousel.querySelector('.carousel-item.active');
+      title.textContent = active.dataset.title || '';
+}
+carousel.addEventListener('slid.bs.carousel', updateTitle);
+updateTitle();
 function getPhoneNumber() {
-  const p = 700;
-  return "+" + "1" + (p + 70).toString() + (p + 27).toString() + ((p*10) - 70).toString();
+      const p = 700;
+      return "+" + "1" + (p + 70).toString() + (p + 27).toString() + ((p*10) - 70).toString();
 }
 window.onload = function() {
-  document.getElementById("call-me").href = "tel:" + getPhoneNumber();
-  document.getElementById("text-me").href = "sms:" + getPhoneNumber();
-  document.getElementById("email-me").href = "mailto:" + crypto.randomUUID()+"@oliverpeek.com?subject=Aloha&body=I need to contact you, and understand this is a burner email.";
+      document.getElementById("call-me").href = "tel:" + getPhoneNumber();
+      document.getElementById("text-me").href = "sms:" + getPhoneNumber();
+      document.getElementById("email-me").href = "mailto:" + crypto.randomUUID()+"@oliverpeek.com?subject=Aloha&body=I need to contact you, and understand this is a burner email.";
 };
 document.getElementById("shuffleQuotes").addEventListener("click", function () {
-  const grid = document.getElementById("quoteGrid");
-  const cards = Array.from(grid.children);
-  for (let i = cards.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    grid.appendChild(cards[j]);
-    cards.splice(j, 1);
-  }
+      const grid = document.getElementById("quoteGrid");
+      const cards = Array.from(grid.children);
+      for (let i = cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            grid.appendChild(cards[j]);
+            cards.splice(j, 1);
+      }
 });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
