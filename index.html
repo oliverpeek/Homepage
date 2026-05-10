@@ -456,6 +456,31 @@ document.getElementById("shuffleQuotes").addEventListener("click", function () {
             cards.splice(j, 1);
       }
 });
+const searchInput = document.querySelector('input[name="q"]');
+
+// 1. Function to handle the data Google sends back
+window.handleSuggestions = function(data) {
+    const suggestions = data[1]; // Google returns an array: [query, [suggestions]]
+    console.log("Related keywords:", suggestions);
+    // Here you would take the 'suggestions' array and render it to a list below your search bar
+};
+
+// 2. Listen for typing
+searchInput.addEventListener('input', (e) => {
+    const query = e.target.value;
+    if (query.length < 2) return;
+
+    // Remove old script if it exists
+    const oldScript = document.getElementById('google-suggest');
+    if (oldScript) oldScript.remove();
+
+    // Inject new script tag (JSONP)
+    const script = document.createElement('script');
+    script.id = 'google-suggest';
+    // client=youtube or client=firefox often return cleaner results without API keys
+    script.src = `https://suggestqueries.google.com/complete/search?client=firefox&q=${encodeURIComponent(query)}&callback=handleSuggestions`;
+    document.body.appendChild(script);
+});
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
